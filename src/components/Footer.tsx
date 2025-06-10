@@ -1,5 +1,6 @@
 
 import { Instagram, Phone, Mail } from "lucide-react";
+import { siteConfig } from "@/config/siteConfig";
 
 const Footer = () => {
   return (
@@ -26,27 +27,27 @@ const Footer = () => {
             <h4 className="text-foreground text-base font-semibold">Stay in Touch</h4>
             <div className="flex flex-col gap-3">
               <a 
-                href="https://instagram.com/jkpatola_official" 
+                href={siteConfig.stayInTouch.instagram.url}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Instagram size={18} />
-                <span className="text-sm">@jkpatola_official</span>
+                <span className="text-sm">{siteConfig.stayInTouch.instagram.handle}</span>
               </a>
               <a 
-                href="tel:+919876543210" 
+                href={siteConfig.stayInTouch.phone.url}
                 className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Phone size={18} />
-                <span className="text-sm">+91-987-654-3210</span>
+                <span className="text-sm">{siteConfig.stayInTouch.phone.number}</span>
               </a>
               <a 
-                href="mailto:info@jkpatola.com" 
+                href={siteConfig.stayInTouch.email.url}
                 className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Mail size={18} />
-                <span className="text-sm">info@jkpatola.com</span>
+                <span className="text-sm">{siteConfig.stayInTouch.email.address}</span>
               </a>
             </div>
           </div>

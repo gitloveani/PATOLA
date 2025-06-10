@@ -1,25 +1,26 @@
 
 import { Instagram, Phone, Send } from "lucide-react";
+import { siteConfig } from "@/config/siteConfig";
 
 const Contact = () => {
   const contactMethods = [
     {
       icon: Instagram,
       title: "Instagram",
-      value: "@jkpatola",
-      link: "https://instagram.com/jkpatola"
+      value: siteConfig.contactUs.instagram.handle,
+      link: siteConfig.contactUs.instagram.url
     },
     {
       icon: Send,
       title: "Pinterest", 
-      value: "@jkpatola",
-      link: "https://pinterest.com/jkpatola"
+      value: siteConfig.contactUs.pinterest.handle,
+      link: siteConfig.contactUs.pinterest.url
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1-555-123-4567",
-      link: "tel:+15551234567"
+      value: siteConfig.contactUs.phone.number,
+      link: siteConfig.contactUs.phone.url
     }
   ];
 
